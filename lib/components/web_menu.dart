@@ -32,7 +32,7 @@ class WebMenuItem extends StatelessWidget {
             title,
             style: TextStyle(
               color: Colors.white,
-              fontWeight: isActive ? FontWeight.w900 : FontWeight.w100,
+              fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
               fontSize: 18,
               decoration: TextDecoration.none,
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:simple_fastapi_blog_app/components/web_menu.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
 
@@ -18,12 +19,12 @@ class HomeScreen extends StatelessWidget {
             child: Row(
               children: [
                 const Spacer(),
-                WebMenuItem(title: "主页", press: () {}, isActive: true),
-                WebMenuItem(title: "博客", press: () {}, isActive: false),
-                WebMenuItem(title: "相册", press: () {}, isActive: false),
-                WebMenuItem(title: "系列", press: () {}, isActive: false),
-                WebMenuItem(title: "联系", press: () {}, isActive: false),
-                WebMenuItem(title: "关于", press: () {}, isActive: false),
+                WebMenuItem(title: 'home'.tr, press: () {}, isActive: true),
+                WebMenuItem(title: 'blog'.tr, press: () {}, isActive: false),
+                WebMenuItem(title: 'album'.tr, press: () {}, isActive: false),
+                WebMenuItem(title: 'series'.tr, press: () {}, isActive: false),
+                WebMenuItem(title: 'contact'.tr, press: () {}, isActive: false),
+                WebMenuItem(title: 'about'.tr, press: () {}, isActive: false),
                 const Spacer(),
               ],
             ),
