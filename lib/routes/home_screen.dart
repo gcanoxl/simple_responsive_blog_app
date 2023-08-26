@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:simple_fastapi_blog_app/components/nav_search_bar.dart';
 import 'package:simple_fastapi_blog_app/components/web_menu.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
+
+import '../components/avatar_icon.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,9 +20,13 @@ class HomeScreen extends StatelessWidget {
             height: 60,
             child: Row(
               children: [
-                Spacer(),
+                const Spacer(),
+                const AvatarIcon(),
+                const Spacer(),
                 WebMenu(),
-                Spacer(),
+                const Spacer(),
+                const NavSearchBar(),
+                const Spacer(),
               ],
             ),
           ),

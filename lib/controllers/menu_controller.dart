@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 class WebMenuController extends GetxController {
-  RxInt _selectedIndex = 0.obs;
+  final RxInt _selectedIndex = 0.obs;
 
   List<String> get menuItems => [
         'home'.tr,
