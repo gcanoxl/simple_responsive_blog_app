@@ -19,14 +19,20 @@ class WebMenuItem extends StatelessWidget {
       type: MaterialType.transparency,
       child: InkWell(
         onTap: press,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: kDefaultPadding / 2,
+        hoverColor:
+            isActive ? Colors.transparent : Theme.of(context).hoverColor,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+          height: double.infinity,
+          decoration: BoxDecoration(
+            color: isActive ? Theme.of(context).hoverColor : Colors.transparent,
           ),
+          alignment: Alignment.center,
           child: Text(
             title,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.white,
+              fontWeight: isActive ? FontWeight.w900 : FontWeight.w100,
               fontSize: 18,
               decoration: TextDecoration.none,
             ),

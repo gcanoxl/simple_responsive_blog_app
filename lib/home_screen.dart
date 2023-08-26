@@ -17,12 +17,14 @@ class HomeScreen extends StatelessWidget {
             height: 60,
             child: Row(
               children: [
-                Container(width: 40, height: 40, color: Colors.blue),
                 const Spacer(),
-                WebMenuItem(title: "主页", press: () {}, isActive: false),
+                WebMenuItem(title: "主页", press: () {}, isActive: true),
                 WebMenuItem(title: "博客", press: () {}, isActive: false),
+                WebMenuItem(title: "相册", press: () {}, isActive: false),
+                WebMenuItem(title: "系列", press: () {}, isActive: false),
+                WebMenuItem(title: "联系", press: () {}, isActive: false),
+                WebMenuItem(title: "关于", press: () {}, isActive: false),
                 const Spacer(),
-                Container(width: 40, height: 40, color: Colors.orange),
               ],
             ),
           ),
