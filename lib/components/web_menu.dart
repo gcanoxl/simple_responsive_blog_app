@@ -1,6 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../constants.dart';
+import '../controllers/menu_controller.dart';
+
+// ignore: use_key_in_widget_constructors
+class WebMenu extends StatelessWidget {
+  final WebMenuController _controller = Get.put(WebMenuController());
+
+  @override
+  Widget build(BuildContext context) {
+    return Obx(
+      () => Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: List.generate(
+          _controller.menuItems.length,
+          (index) => WebMenuItem(
+            title: _controller.menuItems[index],
+            press: () {
+              _controller.setMenuIndex(index);
+            },
+            isActive: _controller.selectedIndex == index,
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class WebMenuItem extends StatelessWidget {
   final String title;
@@ -21,6 +47,8 @@ class WebMenuItem extends StatelessWidget {
         onTap: press,
         hoverColor:
             isActive ? Colors.transparent : Theme.of(context).hoverColor,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           height: double.infinity,
