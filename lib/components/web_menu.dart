@@ -17,9 +17,7 @@ class WebMenu extends StatelessWidget {
           _controller.menuItems.length,
           (index) => WebMenuItem(
             title: _controller.menuItems[index],
-            press: () {
-              _controller.setMenuIndex(index);
-            },
+            press: () {},
             isActive: _controller.selectedIndex == index,
           ),
         ),
