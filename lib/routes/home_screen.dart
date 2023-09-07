@@ -10,22 +10,27 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const NavBar(),
-          Container(
-            height: 100,
-            constraints: BoxConstraints(maxWidth: kMaxWidth),
-            child: Row(children: [
-              //Left
-              Posts(),
-              //Right
-              Column(
-                children: [],
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [
+              const NavBar(),
+              Container(
+                constraints: const BoxConstraints(maxWidth: kMaxWidth),
+                child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      //Left
+                      Posts(),
+                      //Right
+                      Column(
+                        children: [],
+                      ),
+                    ]),
               ),
-            ]),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
@@ -57,6 +62,7 @@ class _PostsState extends State<Posts> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: List.generate(
         posts.length,
         (index) => PostItem(post: posts[index]),
@@ -74,14 +80,12 @@ class PostItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(kDefaultPadding),
-      child: Column(
-        children: [
-          Text(post.title),
-          Text(post.content),
-        ],
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(post.title),
+        Text(post.content),
+      ],
     );
   }
 }
