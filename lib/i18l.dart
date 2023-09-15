@@ -12,6 +12,10 @@ class Messages extends Translations {
           'about': 'About',
           'login': 'Log In',
           'signup': 'Sign Up',
+          'username': 'Username',
+          'password': 'Password',
+          'recentposts': 'Recent Posts',
+          'mostviewedposts': 'Most Viewed Posts',
         },
         'zh_CN': {
           'home': "主页",
@@ -22,6 +26,10 @@ class Messages extends Translations {
           'about': '关于',
           'login': '登录',
           'signup': '注册',
+          'username': '用户名',
+          'password': '密码',
+          'recentposts': '最新博文',
+          'mostviewedposts': '最热博文',
         },
       };
 }

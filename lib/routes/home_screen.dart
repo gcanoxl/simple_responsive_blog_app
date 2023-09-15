@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                         LoginFrame(),
                         ContainerBox(
                           child: Column(
-                            children: [],
+                            children: [Text("")],
                           ),
                         ),
                       ],

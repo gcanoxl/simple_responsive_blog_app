@@ -14,12 +14,14 @@ class LoginFrame extends StatelessWidget {
     return ContainerBox(
         child: Column(
       children: [
-        const MyTextField(
+        MyTextField(
           prefixIcon: Icon(Icons.person),
+          hintText: 'username'.tr,
         ),
         const SizedBox(height: kDefaultPadding),
-        const MyTextField(
+        MyTextField(
           prefixIcon: Icon(Icons.lock),
+          hintText: 'password'.tr,
           obscure: true,
         ),
         const SizedBox(height: kDefaultPadding),
@@ -36,7 +38,7 @@ class LoginFrame extends StatelessWidget {
               child: TextButton.icon(
                 onPressed: () {},
                 icon: const Icon(Icons.signpost),
-                label: Text('login'.tr),
+                label: Text('signup'.tr),
               ),
             ),
           ],

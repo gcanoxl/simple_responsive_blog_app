@@ -6,11 +6,13 @@ class MyTextField extends StatelessWidget {
     this.prefixIcon,
     this.suffixIcon,
     this.obscure = false,
+    this.hintText = "",
   });
 
   final Icon? prefixIcon;
   final Icon? suffixIcon;
   final bool obscure;
+  final String hintText;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +22,7 @@ class MyTextField extends StatelessWidget {
       cursorColor: Theme.of(context).colorScheme.inversePrimary,
       cursorHeight: 20,
       decoration: InputDecoration(
+        hintText: hintText,
         suffixIcon: IconButton(
           icon: suffixIcon ?? const Icon(Icons.login, size: 0),
           onPressed: () {},
