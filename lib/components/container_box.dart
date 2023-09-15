@@ -12,12 +12,13 @@ class ContainerBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.only(top: kDefaultPadding),
-        padding: const EdgeInsets.all(kDefaultPadding),
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.inversePrimary.withOpacity(0.1),
-        ),
-        child: child);
+      margin: const EdgeInsets.only(top: kDefaultPadding),
+      padding: const EdgeInsets.all(kDefaultPadding),
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.inversePrimary.withOpacity(0.1),
+      ),
+      child: child,
+    );
   }
 }

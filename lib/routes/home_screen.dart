@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_fastapi_blog_app/components/container_box.dart';
+import 'package:simple_fastapi_blog_app/components/login_frame.dart';
 import 'package:simple_fastapi_blog_app/components/nav_bar.dart';
 import 'package:simple_fastapi_blog_app/components/posts.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
@@ -32,7 +33,12 @@ class HomeScreen extends StatelessWidget {
                     flex: 1,
                     child: Column(
                       children: [
-                        ContainerBox(child: Text("2dafasdf")),
+                        LoginFrame(),
+                        ContainerBox(
+                          child: Column(
+                            children: [],
+                          ),
+                        ),
                       ],
                     ),
                   ),

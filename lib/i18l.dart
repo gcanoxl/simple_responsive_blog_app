@@ -10,6 +10,8 @@ class Messages extends Translations {
           'series': 'Series',
           'contact': 'Contact',
           'about': 'About',
+          'login': 'Log In',
+          'signup': 'Sign Up',
         },
         'zh_CN': {
           'home': "主页",
@@ -18,6 +20,8 @@ class Messages extends Translations {
           'series': '系列',
           'contact': '联系',
           'about': '关于',
+          'login': '登录',
+          'signup': '注册',
         },
       };
 }

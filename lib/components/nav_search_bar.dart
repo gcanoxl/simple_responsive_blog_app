@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../constants.dart';
+import 'package:simple_fastapi_blog_app/components/my_test_field.dart';
+import 'package:simple_fastapi_blog_app/constants.dart';
 
 class NavSearchBar extends StatelessWidget {
   const NavSearchBar({
@@ -12,28 +12,10 @@ class NavSearchBar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: kDefaultPadding / 1.5),
       width: 180,
-      child: Material(
+      child: const Material(
         type: MaterialType.transparency,
-        child: TextField(
-          textAlignVertical: TextAlignVertical.top,
-          cursorColor: Theme.of(context).colorScheme.inversePrimary,
-          cursorHeight: 20,
-          decoration: InputDecoration(
-            suffixIcon: IconButton(
-              icon: const Icon(Icons.search),
-              onPressed: () {},
-            ),
-            suffixIconColor: Theme.of(context).colorScheme.inversePrimary,
-            fillColor: Colors.white,
-            filled: true,
-            // border: InputBorder.none,
-            enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
-            ),
-            focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
-            ),
-          ),
+        child: MyTextField(
+          suffixIcon: Icon(Icons.search),
         ),
       ),
     );
