@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:simple_fastapi_blog_app/components/container_box.dart';
 import 'package:simple_fastapi_blog_app/components/login_frame.dart';
 import 'package:simple_fastapi_blog_app/components/nav_bar.dart';
@@ -21,11 +22,11 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //Left
-                  Expanded(
+                  const Expanded(
                     flex: 2,
                     child: Posts(),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: kDefaultPadding,
                   ),
                   //Right
@@ -33,10 +34,13 @@ class HomeScreen extends StatelessWidget {
                     flex: 1,
                     child: Column(
                       children: [
-                        LoginFrame(),
+                        const LoginFrame(),
                         ContainerBox(
                           child: Column(
-                            children: [Text("")],
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('mostviewedposts'.tr),
+                            ],
                           ),
                         ),
                       ],

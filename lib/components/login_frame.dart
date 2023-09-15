@@ -15,12 +15,12 @@ class LoginFrame extends StatelessWidget {
         child: Column(
       children: [
         MyTextField(
-          prefixIcon: Icon(Icons.person),
+          prefixIcon: const Icon(Icons.person),
           hintText: 'username'.tr,
         ),
         const SizedBox(height: kDefaultPadding),
         MyTextField(
-          prefixIcon: Icon(Icons.lock),
+          prefixIcon: const Icon(Icons.lock),
           hintText: 'password'.tr,
           obscure: true,
         ),
