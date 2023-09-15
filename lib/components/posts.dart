@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_fastapi_blog_app/components/container_box.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
 import 'package:simple_fastapi_blog_app/models/post.dart';
 import 'package:simple_fastapi_blog_app/providers/post_provider.dart';
@@ -47,18 +48,7 @@ class PostItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var color = Theme.of(context).colorScheme.inversePrimary;
-    return Container(
-      margin: const EdgeInsets.only(top: kDefaultPadding),
-      padding: const EdgeInsets.all(kDefaultPadding),
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
-        // border: Border(bottom: BorderSide(width: 1, color: color))
-        // borderRadius: const BorderRadius.all(
-        //   Radius.circular(kDefaultPadding / 3),
-        // ),
-      ),
+    return ContainerBox(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_fastapi_blog_app/components/container_box.dart';
 import 'package:simple_fastapi_blog_app/components/nav_bar.dart';
 import 'package:simple_fastapi_blog_app/components/posts.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
@@ -15,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             const NavBar(),
             Container(
               constraints: const BoxConstraints(maxWidth: kMaxWidth),
-              child: const Row(
+              child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //Left
@@ -23,11 +24,16 @@ class HomeScreen extends StatelessWidget {
                     flex: 2,
                     child: Posts(),
                   ),
+                  SizedBox(
+                    width: kDefaultPadding,
+                  ),
                   //Right
                   Expanded(
                     flex: 1,
                     child: Column(
-                      children: [],
+                      children: [
+                        ContainerBox(child: Text("2dafasdf")),
+                      ],
                     ),
                   ),
                 ],
