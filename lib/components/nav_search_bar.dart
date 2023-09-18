@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_fastapi_blog_app/components/my_test_field.dart';
+import 'package:simple_fastapi_blog_app/components/my_text_field.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
 
 class NavSearchBar extends StatelessWidget {

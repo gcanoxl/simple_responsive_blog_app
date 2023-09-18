@@ -25,7 +25,8 @@ class MyTextField extends StatelessWidget {
       obscureText: obscure,
       cursorColor: Theme.of(context).colorScheme.inversePrimary,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
 
         hintText: hintText,
         suffixIcon: IconButton(

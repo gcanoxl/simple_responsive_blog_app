@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simple_fastapi_blog_app/components/container_box.dart';
-import 'package:simple_fastapi_blog_app/components/my_test_field.dart';
+import 'package:simple_fastapi_blog_app/components/my_text_field.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
 
 class LoginFrame extends StatelessWidget {
