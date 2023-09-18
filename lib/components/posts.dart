@@ -81,6 +81,7 @@ class PostItem extends StatelessWidget {
               IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.comment),
+                // color: Theme.of(context).colorScheme.inversePrimary,
               ),
               IconButton(
                 onPressed: () {},

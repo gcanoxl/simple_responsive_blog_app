@@ -14,8 +14,10 @@ class NavSearchBar extends StatelessWidget {
       width: 180,
       child: const Material(
         type: MaterialType.transparency,
-        child: MyTextField(
-          suffixIcon: Icon(Icons.search),
+        child: SizedBox(
+          child: MyTextField(
+            suffixIcon: Icon(Icons.search),
+          ),
         ),
       ),
     );

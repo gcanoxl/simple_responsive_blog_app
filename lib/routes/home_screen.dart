@@ -18,15 +18,15 @@ class HomeScreen extends StatelessWidget {
             const NavBar(),
             Container(
               constraints: const BoxConstraints(maxWidth: kMaxWidth),
-              child: Row(
+              child: const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //Left
-                  const Expanded(
+                  Expanded(
                     flex: 2,
                     child: Posts(),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: kDefaultPadding,
                   ),
                   //Right
@@ -34,15 +34,7 @@ class HomeScreen extends StatelessWidget {
                     flex: 1,
                     child: Column(
                       children: [
-                        const LoginFrame(),
-                        ContainerBox(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('mostviewedposts'.tr),
-                            ],
-                          ),
-                        ),
+                        LoginFrame(),
                       ],
                     ),
                   ),
