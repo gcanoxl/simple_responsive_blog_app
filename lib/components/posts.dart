@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:simple_fastapi_blog_app/components/container_box.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
 import 'package:simple_fastapi_blog_app/models/post.dart';
 import 'package:simple_fastapi_blog_app/providers/post_provider.dart';
+import 'package:simple_fastapi_blog_app/routes/detail_screen.dart';
 
 class Posts extends StatefulWidget {
   const Posts({
@@ -53,9 +55,17 @@ class PostItem extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            post.title,
-            style: const TextStyle(fontSize: 22),
+          Material(
+            type: MaterialType.transparency,
+            child: InkWell(
+              onTap: () {
+                Get.to(DetailScreen(), arguments: post);
+              },
+              child: Text(
+                post.title,
+                style: const TextStyle(fontSize: 22),
+              ),
+            ),
           ),
           const SizedBox(height: kDefaultPadding / 2),
           Text(

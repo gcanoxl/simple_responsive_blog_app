@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       locale: const Locale('zh', 'CN'),
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
       home: const HomeScreen(),
