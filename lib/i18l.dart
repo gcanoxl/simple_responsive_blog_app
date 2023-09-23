@@ -16,6 +16,7 @@ class Messages extends Translations {
           'password': 'Password',
           'recentposts': 'Recent Posts',
           'mostviewedposts': 'Most Viewed Posts',
+          'loading': 'Loading...',
         },
         'zh_CN': {
           'home': "主页",
@@ -30,6 +31,7 @@ class Messages extends Translations {
           'password': '密码',
           'recentposts': '最新博文',
           'mostviewedposts': '最热博文',
+          'loading': '加载中...'
         },
       };
 }
