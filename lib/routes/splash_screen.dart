@@ -5,9 +5,7 @@ import 'package:simple_fastapi_blog_app/routes/home_screen.dart';
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
-  Future<void> initializeSettings() async {
-    await Future.delayed(const Duration(seconds: 5));
-  }
+  Future<void> initializeSettings() async {}
 
   @override
   Widget build(BuildContext context) {
