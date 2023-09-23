@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:simple_fastapi_blog_app/components/login_frame.dart';
 import 'package:simple_fastapi_blog_app/components/nav_bar.dart';
 import 'package:simple_fastapi_blog_app/components/posts.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
+import 'package:simple_fastapi_blog_app/controllers/authentication_manager.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  final AuthenticationManager _authManger = Get.put(AuthenticationManager());
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             const NavBar(),
             Container(
               constraints: const BoxConstraints(maxWidth: kMaxWidth),
-              child: Row(
+              child: const Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //Left
@@ -24,11 +28,11 @@ class HomeScreen extends StatelessWidget {
                     flex: 2,
                     child: Posts(),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: kDefaultPadding,
                   ),
                   //Right
-                  const Expanded(
+                  Expanded(
                     flex: 1,
                     child: Column(
                       children: [
