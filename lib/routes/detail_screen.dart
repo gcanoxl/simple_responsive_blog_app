@@ -8,7 +8,7 @@ class DetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Post post = Get.arguments as Post;
+    PostModel post = Get.arguments as PostModel;
     return Scaffold(
       appBar: AppBar(
         title: Text(post.title),

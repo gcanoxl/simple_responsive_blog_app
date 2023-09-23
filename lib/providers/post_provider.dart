@@ -1,13 +1,14 @@
 import 'package:get/get.dart';
 import 'package:simple_fastapi_blog_app/models/index.dart';
+import 'package:simple_fastapi_blog_app/providers/base_provider.dart';
 
-class PostProvider extends GetConnect {
-  Future<Response<List<Post>>> getPosts(int limit, {int offset = 0}) {
+class PostProvider extends BaseProvider {
+  Future<Response<List<PostModel>>> getPosts(int limit, {int offset = 0}) {
     return get(
-      'http://127.0.0.1/api/posts/?limit=$limit&offset=$offset',
+      '/api/posts/?limit=$limit&offset=$offset',
       decoder: (data) {
         List list = data['posts'];
-        return List<Post>.from(list.map((e) => Post.fromJson(e)));
+        return List<PostModel>.from(list.map((e) => PostModel.fromJson(e)));
       },
     );
   }

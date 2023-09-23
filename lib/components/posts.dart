@@ -19,7 +19,7 @@ class Posts extends StatelessWidget {
           return const LoadingWidget();
         } else {
           if (snapshot.data!.isOk) {
-            List<Post> posts = snapshot.data!.body!;
+            List<PostModel> posts = snapshot.data!.body!;
             return Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: List.generate(

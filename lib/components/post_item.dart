@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simple_fastapi_blog_app/components/container_box.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
-import 'package:simple_fastapi_blog_app/models/post.dart';
+import 'package:simple_fastapi_blog_app/models/index.dart';
 
 import '../routes/detail_screen.dart';
 
@@ -11,7 +11,7 @@ class PostItem extends StatelessWidget {
     super.key,
     required this.post,
   });
-  final Post post;
+  final PostModel post;
 
   @override
   Widget build(BuildContext context) {

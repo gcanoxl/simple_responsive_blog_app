@@ -1,1 +1,2 @@
-export 'post.dart' ; 
+export 'userModel.dart' ; 
+export 'postModel.dart' ; 

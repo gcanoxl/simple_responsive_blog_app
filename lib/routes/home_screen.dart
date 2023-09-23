@@ -4,12 +4,12 @@ import 'package:simple_fastapi_blog_app/components/login_frame.dart';
 import 'package:simple_fastapi_blog_app/components/nav_bar.dart';
 import 'package:simple_fastapi_blog_app/components/posts.dart';
 import 'package:simple_fastapi_blog_app/constants.dart';
-import 'package:simple_fastapi_blog_app/controllers/authentication_manager.dart';
+import 'package:simple_fastapi_blog_app/controllers/user_controller.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  final AuthenticationManager _authManger = Get.put(AuthenticationManager());
+  final UserController _authManger = Get.put(UserController());
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +20,15 @@ class HomeScreen extends StatelessWidget {
             const NavBar(),
             Container(
               constraints: const BoxConstraints(maxWidth: kMaxWidth),
-              child: const Row(
+              child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //Left
-                  Expanded(
+                  const Expanded(
                     flex: 2,
                     child: Posts(),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: kDefaultPadding,
                   ),
                   //Right
