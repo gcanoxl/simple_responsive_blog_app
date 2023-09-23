@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             const NavBar(),
             Container(
               constraints: const BoxConstraints(maxWidth: kMaxWidth),
-              child: const Row(
+              child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //Left
@@ -24,11 +24,11 @@ class HomeScreen extends StatelessWidget {
                     flex: 2,
                     child: Posts(),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: kDefaultPadding,
                   ),
                   //Right
-                  Expanded(
+                  const Expanded(
                     flex: 1,
                     child: Column(
                       children: [
