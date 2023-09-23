@@ -19,7 +19,9 @@ class SplashScreen extends StatelessWidget {
         } else {
           if (snapshot.hasError) {
             return Scaffold(
-              body: ErrorWidget(snapshot.error!),
+              body: Center(
+                child: Text(snapshot.error.toString()),
+              ),
             );
           } else {
             return const HomeScreen();
