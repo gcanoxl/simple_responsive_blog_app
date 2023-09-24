@@ -31,4 +31,10 @@ class UserController extends GetxController {
     await box.write("user", user.toJson());
     await updateLoginState();
   }
+
+  logout() async {
+    final box = GetStorage();
+    await box.remove("user");
+    await updateLoginState();
+  }
 }
