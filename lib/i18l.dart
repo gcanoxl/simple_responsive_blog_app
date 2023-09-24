@@ -21,6 +21,7 @@ class Messages extends Translations {
           'admin': 'Admin',
           'user': 'User',
           'profile': 'profile',
+          'delete': 'Delete',
         },
         'zh_CN': {
           'home': "主页",
@@ -40,6 +41,7 @@ class Messages extends Translations {
           'admin': '管理员',
           'user': '普通用户',
           'profile': '个人资料',
+          'delete': '删除',
         },
       };
 }

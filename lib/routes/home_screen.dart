@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //Left
-                  const Expanded(
+                  Expanded(
                     flex: 2,
                     child: Posts(),
                   ),
